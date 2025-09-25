@@ -23,6 +23,7 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-center bg-zinc-900 p-6 mx-auto">
       <h1 className="text-3xl font-bold mb-6 text-center">Access Simulator</h1>
+
       <div className="overflow-x-auto">
         <table className="min-w-[70%] border border-gray-300 divide-y divide-gray-200">
           <thead className="bg-zinc-800">
@@ -62,7 +63,7 @@ export default function Home() {
           employees.length > 0 ? "opacity-100" : "opacity-0"
         }`}
       >
-        <table className="min-w-full text-center border border-gray-300 divide-y divide-gray-200">
+        <table className=" min-w-[70%] text-center border border-gray-300 divide-y divide-gray-200">
           <thead className="bg-zinc-800">
             <tr>
               <th className="px-4 py-2 border">Employee ID</th>
