@@ -1,10 +1,12 @@
 const express = require("express");
+const cors = require("cors");
 const employees = require("./employees.json");
 const rooms = require("./rooms");
 const timeToMinutes = require("./utility/timeToMinutes");
 require("dotenv").config();
 const Port = process.env.PORT || 3000;
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 app.get("/api/simaccess", (req, res) => {
