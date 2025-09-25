@@ -1,13 +1,13 @@
-# Innovaxel Access Simulator 
+# Innovaxel Access Simulator
 
 ## Overview
 
 This is the **Innovaxel Access Simulator** project for the Fall Internship 2025.  
 It simulates employee access to secure rooms based on access level, room timings, and cooldown periods.
 
-- **Frontend:** Next.js 15 + Tailwind CSS v4  
-- **Backend:** Node.js + Express  
-- **API:** `/api/simaccess` returns access decisions for employees  
+- **Frontend:** Next.js 15 + Tailwind CSS v4
+- **Backend:** Node.js + Express
+- **API:** `/api/simaccess` returns access decisions for employees
 
 ---
 
@@ -23,14 +23,15 @@ It simulates employee access to secure rooms based on access level, room timings
 
 ## Tech Stack
 
-- **Frontend:** Next.js 15 (App Router), Tailwind CSS v4, React  
-- **Backend:** Node.js, Express  
-- **Data:** Static JSON files (`employees.json`)  
+- **Frontend:** Next.js 15 (App Router), Tailwind CSS v4, React
+- **Backend:** Node.js, Express
+- **Data:** Static JSON files (`employees.json`)
 
 ---
 
 ## Folder Structure
 
+```
 /backend
 ├─ employees.json
 ├─ rooms.js
@@ -41,7 +42,7 @@ It simulates employee access to secure rooms based on access level, room timings
 ├─ app/page.jsx
 ├─ globals.css
 └─ assets/raw_employee_data.js
-
+```
 
 ---
 
@@ -53,16 +54,21 @@ It simulates employee access to secure rooms based on access level, room timings
 cd backend
 npm install
 ```
+
 Create a .env file
+
 ```bash
 PORT=5000
 ```
+
 Run the backend:
+
 ```bash
 npm run dev
 ```
 
 ### 2- Frontend
+
 ```bash
 cd frontend
 npm install
