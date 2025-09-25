@@ -5,11 +5,11 @@ import rawEmployees from "@/assets/raw_employee_data";
 export default function Home() {
   const [employees, setEmployees] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  const Port = process.env.PORT || 3000;
   const simulateAccess = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/simaccess");
+      const res = await fetch(`http://localhost:${Port}/api/simaccess`);
       const data = await res.json();
       setEmployees(data);
     } catch (err) {
