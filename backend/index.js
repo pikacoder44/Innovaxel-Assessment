@@ -36,7 +36,7 @@ app.get("/api/simaccess", (req, res) => {
       }
     }
     if (!reason) {
-      reason = `Access to ${employee.room}`;
+      reason = `Access granted to ${employee.room}`;
       lastAccess[`${employee.id}-${employee.room}`] = requestTime;
     }
     return {
