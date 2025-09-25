@@ -9,8 +9,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+let lastAccess = {};
 app.get("/api/simaccess", (req, res) => {
-  let lastAccess = {};
   const resultData = employees.map((employee) => {
     const room = rooms[employee.room];
     let access = "Granted";
@@ -21,8 +21,8 @@ app.get("/api/simaccess", (req, res) => {
     const roomCloseTime = timeToMinutes(room.close);
 
     if (employee.access_level < room.minLevel) {
-      reason = "Need higher access level";
       access = "Denied";
+      reason = "Need higher access level";
     } else if (requestTime < roomOpenTime || requestTime > roomCloseTime) {
       console.log("Room Unavailable/closed currently");
       reason = "Room Unavailable/closed currently";
@@ -37,7 +37,7 @@ app.get("/api/simaccess", (req, res) => {
         }
       }
     }
-    if (!reason) {
+    if (access === "Granted") {
       reason = `Access granted to ${employee.room}`;
       lastAccess[`${employee.id}-${employee.room}`] = requestTime;
     }
