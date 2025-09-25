@@ -70,7 +70,11 @@ npm run dev
 ### 2- Frontend
 
 ```bash
+PORT=5000
+```
+```bash
 cd frontend
+// Create a .env.local file
 npm install
 npm run dev
 ```
